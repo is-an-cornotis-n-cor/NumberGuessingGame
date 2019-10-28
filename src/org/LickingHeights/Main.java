@@ -17,7 +17,7 @@ public class Main {
             numberGuessed = keyboard.nextInt();
 
           guessingGame(numberInMyHead, numberGuessed);
-
+          System.out.println (guessingGame(numberInMyHead, numberGuessed));
         } while (numberGuessed != numberInMyHead);
 
 
@@ -25,9 +25,20 @@ public class Main {
     }
 
 
-   
+    public static String guessingGame(int numberInMyHead, int numberGuessed) {
+
+        if (numberGuessed > numberInMyHead) {
+           return "You are to high";
+
+        } else if (numberGuessed < numberInMyHead) {
+               return "You are to low";
+        } else {
+            return "You are correct";
+        }
+    }
 
 
 
+}
 
 
